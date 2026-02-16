@@ -32,7 +32,20 @@ body {
 }
 
 h1 {
-    font-size: 1.4rem;
+    line-height: 0.8;
+}
+
+h1 .name {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+h1 .handle {
+    font-size: 1rem;
+    opacity: 0.5;
+    margin-top: 0px;
 }
 
 h2 {
@@ -109,7 +122,71 @@ a:hover::after{
 }
 
 .socialLinks {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
     list-style: none;
     padding: 0;
-    margin-bottom: 10px;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    position: relative;
+    padding-left: 35px;
+}
+
+section ul li::before {
+    content: ">> ";
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s ease;
+}
+
+section ul li:hover::before{
+    transform: translateX(4px);
+}
+
+.nodeList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nodeList li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 6px;
+}
+
+/* Default connector */
+.nodeList li::before {
+    content: "├─";
+    position: absolute;
+    left: 0;
+    opacity: 0.7;
+}
+
+/* Last item connector */
+.nodeList li.last::before {
+    content: "└─";
+}
+
+.pfp {
+    display: block;
+    margin: 0 auto 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    filter: grayscale(100%);
+    transition: filter var(--transition), transform var(--transition);
+    object-fit: cover;
+}
+
+.pfp:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
 }
