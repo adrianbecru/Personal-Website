@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('./fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+    line-height: 1.5;
+    tab-size: 4;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    margin-left: 32px;
+    margin-top: 70px;
+}
+
+h1 {
+    font-size: 1.4rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin-top: 60px;
+    margin-bottom: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    column-gap: 60px;
+    max-width: 1000px;
+}
+
+.content {
+    max-width: 36rem;
+}
+
+section{
+    margin-bottom: 80%;
+}
+
+.sideBar {
+   font-size: 0.9rem;
+   border-right: 2px solid #ddd;
+   padding-right: 40px;
+}
+
+.sideBar p {
+    margin-bottom: 8px;
+    opacity: 0.6;
+}
+
+.sideBar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.sideBar li {
+    margin-bottom: 8px;
+}
+
+.sideBar a:hover {
+    text-decoration: underline
+}
